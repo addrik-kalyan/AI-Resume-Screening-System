@@ -1,0 +1,21 @@
+job,company,skills,description
+Python Developer,Google,python flask django sql rest api git,"Build and maintain backend services using Python and Flask/Django, write clean REST APIs, and work with relational databases."
+Java Developer,Infosys,java spring sql hibernate maven,"Develop enterprise applications using Java, Spring Boot, Hibernate and SQL databases."
+Data Scientist,Amazon,python machine learning sql statistics pandas numpy,"Analyze large datasets, build machine learning models, and apply statistics to drive business decisions."
+Frontend Developer,Microsoft,react javascript html css typescript,"Build responsive and interactive user interfaces using React, JavaScript, HTML and CSS."
+Cloud Engineer,AWS,aws python linux docker kubernetes terraform,"Design and manage cloud infrastructure on AWS, automate deployments using Docker, Kubernetes and Terraform."
+ML Engineer,Meta,python machine learning deep learning tensorflow pytorch sql,"Design, train and deploy machine learning and deep learning models into production systems."
+Backend Developer,Infosys,python flask django sql mongodb rest api,"Develop and maintain backend services and APIs using Python, Flask/Django and databases such as SQL or MongoDB."
+Full Stack Developer,Wipro,javascript react node.js mongodb express html css,"Develop end-to-end web applications using the MERN stack (MongoDB, Express, React, Node.js)."
+Data Analyst,TCS,sql excel python tableau power bi statistics,"Analyze business data, build dashboards and reports using SQL, Excel, Tableau and Power BI."
+DevOps Engineer,Accenture,docker kubernetes aws ci/cd linux jenkins terraform,"Automate build, test and deployment pipelines, and manage cloud infrastructure and containers."
+Mobile App Developer,Samsung,java kotlin android flutter dart,Design and develop native and cross-platform mobile applications for Android using Kotlin/Java or Flutter.
+AI Research Engineer,Google,python machine learning deep learning nlp tensorflow pytorch research,"Conduct research and build novel AI/NLP models, publish findings and prototype new algorithms."
+Software Test Engineer,Cognizant,selenium java python testing automation sql,"Design and execute manual and automated test cases using Selenium, Java/Python and SQL."
+Database Administrator,Oracle,sql mysql postgresql oracle database administration backup,"Manage, optimize and secure relational databases such as MySQL, PostgreSQL and Oracle."
+UI/UX Designer,Adobe,figma adobe xd html css wireframing prototyping,"Design user interfaces and experiences using Figma/Adobe XD, create wireframes and prototypes."
+Cybersecurity Analyst,IBM,network security python linux firewalls penetration testing,"Monitor systems for security threats, perform penetration testing and secure network infrastructure."
+Business Analyst,Deloitte,sql excel communication requirement analysis power bi,"Gather business requirements, analyze data and present insights using SQL, Excel and Power BI."
+NLP Engineer,OpenAI,python nlp machine learning deep learning spacy nltk transformers,Build natural language processing pipelines and train transformer-based language models.
+React Native Developer,Flipkart,react native javascript typescript mobile development,"Build cross-platform mobile applications using React Native, JavaScript and TypeScript."
+System Administrator,HCL,linux windows server networking bash scripting,"Maintain servers, networks and IT infrastructure, automate tasks using shell scripting."

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Resume Analysis{% endblock %}
+{% block content %}
+<section class="card">
+  <h2>Extracted Skills</h2>
+  {% if skills %}
+    <div class="chip-list">
+      {% for s in skills %}<span class="chip">{{ s }}</span>{% endfor %}
+    </div>
+  {% else %}
+    <p>No recognizable skills were found in this resume.</p>
+  {% endif %}
+</section>
+
+<section class="card">
+  <h2>Recommended Jobs</h2>
+  {% if jobs %}
+    {% for j in jobs %}
+      <div class="job-card">
+        <div class="job-card-header">
+          <h3>{{ j.job }}</h3>
+          <span class="match-badge match-{{ 'high' if j.similarity >= 50 else ('mid' if j.similarity >= 20 else 'low') }}">
+            {{ j.similarity }}% similarity
+          </span>
+        </div>
+        <p class="company">🏢 {{ j.company }}</p>
+        {% if j.description %}<p class="description">{{ j.description }}</p>{% endif %}
+        <p>Resume Score: <strong>{{ j.match_score }}%</strong>
+          ({{ j.matched_skills|length }}/{{ j.required_skills|length }} required skills matched)</p>
+        <div class="chip-list small">
+          {% for s in j.required_skills %}
+            <span class="chip {{ 'chip-matched' if s in j.matched_skills else 'chip-missing' }}">{{ s }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>No matching jobs found. Try uploading a resume with more recognizable technical skills.</p>
+  {% endif %}
+
+  <a href="{{ url_for('upload') }}" class="btn-outline">Upload Another Resume</a>
+</section>
+{% endblock %}

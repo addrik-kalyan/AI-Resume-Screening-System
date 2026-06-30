@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}Admin Panel{% endblock %}
+{% block content %}
+<section class="card">
+  <h2>Admin Panel</h2>
+  <p class="subtitle small">Manage job postings and registered users.</p>
+</section>
+
+<section class="card">
+  <h3>Add New Job</h3>
+  <form method="POST" action="{{ url_for('admin_add_job') }}" class="inline-form">
+    <input type="text" name="job" placeholder="Job Title" required>
+    <input type="text" name="company" placeholder="Company" required>
+    <input type="text" name="skills" placeholder="skills space separated e.g. python sql aws" required>
+    <input type="text" name="description" placeholder="Short description">
+    <button type="submit" class="btn-primary">Add Job</button>
+  </form>
+</section>
+
+<section class="card">
+  <h3>Jobs ({{ jobs|length }})</h3>
+  <table class="data-table">
+    <thead>
+      <tr><th>#</th><th>Job / Company / Skills</th><th>Actions</th></tr>
+    </thead>
+    <tbody>
+      {% for j in jobs %}
+      <tr>
+        <td>{{ loop.index0 }}</td>
+        <td>
+          <form method="POST" action="{{ url_for('admin_update_job', index=loop.index0) }}" class="inline-form compact">
+            <input type="text" name="job" value="{{ j.job }}">
+            <input type="text" name="company" value="{{ j.company }}">
+            <input type="text" name="skills" value="{{ j.skills }}">
+            <input type="text" name="description" value="{{ j.description if j.description else '' }}">
+            <button type="submit" class="btn-small">Update</button>
+          </form>
+        </td>
+        <td>
+          <form method="POST" action="{{ url_for('admin_delete_job', index=loop.index0) }}" class="inline-form compact">
+            <button type="submit" class="btn-small btn-danger">Delete</button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+<section class="card">
+  <h3>Registered Users ({{ users|length }})</h3>
+  <table class="data-table">
+    <thead>
+      <tr><th>Name</th><th>Email</th><th>Resume</th><th>Skills</th><th>Actions</th></tr>
+    </thead>
+    <tbody>
+      {% for u in users %}
+      <tr>
+        <td>{{ u.name }}</td>
+        <td>{{ u.email }}</td>
+        <td>{{ u.resume or "—" }}</td>
+        <td>{{ u.skills|join(", ") if u.skills else "—" }}</td>
+        <td>
+          <form method="POST" action="{{ url_for('admin_delete_user', email=u.email) }}" class="inline-form compact">
+            <button type="submit" class="btn-small btn-danger">Remove</button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<section class="card">
+  <h2>Welcome, {{ user.name }} 👋</h2>
+
+  {% if user.resume %}
+    <p>Last uploaded resume: <strong>{{ user.resume }}</strong></p>
+    <p>Extracted skills:</p>
+    <div class="chip-list">
+      {% for s in user.skills %}<span class="chip">{{ s }}</span>{% endfor %}
+    </div>
+  {% else %}
+    <p>You haven't uploaded a resume yet.</p>
+  {% endif %}
+
+  <a href="{{ url_for('upload') }}" class="btn-primary">Upload / Re-analyze Resume</a>
+</section>
+{% endblock %}

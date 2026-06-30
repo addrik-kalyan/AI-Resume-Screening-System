@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<section class="card form-card">
+  <h2>Login</h2>
+  <form method="POST" action="{{ url_for('login') }}">
+    <label>Email</label>
+    <input type="email" name="email" required placeholder="you@example.com">
+
+    <label>Password</label>
+    <input type="password" name="password" required placeholder="••••••••">
+
+    <button type="submit" class="btn-primary full-width">Login</button>
+  </form>
+  <p class="form-footer">
+    New here? <a href="{{ url_for('register') }}">Create an account</a>
+  </p>
+  <p class="hint">Admin demo login: <code>admin@resume.ai</code> / <code>admin123</code></p>
+</section>
+{% endblock %}

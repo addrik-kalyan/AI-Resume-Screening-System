@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Upload Resume{% endblock %}
+{% block content %}
+<section class="card form-card">
+  <h2>Upload Your Resume</h2>
+  <p class="subtitle small">Supported formats: PDF, DOCX (max 5MB)</p>
+
+  <form method="POST" action="{{ url_for('upload') }}" enctype="multipart/form-data" id="upload-form">
+    <input type="file" name="resume" id="resume-input" accept=".pdf,.docx" required>
+    <button type="submit" class="btn-primary full-width">Analyze Resume</button>
+  </form>
+</section>
+{% endblock %}

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Administrator",
+    "email": "admin@resume.ai",
+    "password": "scrypt:32768:8:1$w0HVbLFThgmFbm6p$be5c0978f8277df552b4c269a63a162371a2e873356ad2985615ed6069101eaca0c5be8753578c677ecbbab56ecb668447c122bedae058afa92f83a81fe3844c",
+    "role": "admin",
+    "resume": null,
+    "skills": []
+  },
+  {
+    "name": "Addrikkalyan2002",
+    "email": "addrikalyan2002@gmail.com",
+    "password": "scrypt:32768:8:1$15dPvlGUYO8vsrYd$16bd6271ef784273d818b507d3f5c9dd225e6d67757230add92988f7a54ad6db6f91bea8a67873cc404cabf26cc8d1eae8dfb2001d15b3bb3edd5347d38beb29",
+    "role": "user",
+    "resume": "addrikalyan2002gmail.com_Addrik_kalyan_X.pdf",
+    "skills": [
+      "python",
+      "c",
+      "mongodb",
+      "sql",
+      "git",
+      "machine learning",
+      "deep learning",
+      "data science",
+      "data analysis",
+      "statistics",
+      "pandas",
+      "numpy",
+      "tensorflow",
+      "scikit-learn",
+      "nlp",
+      "tableau",
+      "power bi",
+      "excel",
+      "automation"
+    ]
+  }
+]
